@@ -1,0 +1,37 @@
+{
+  "name": "codeceptjs-quick-start",
+  "version": "0.0.1",
+  "description": "codeceptjs quick start",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf tests/acceptance/report/*.*",
+    "test:acceptance": "yarn clean && ./node_modules/.bin/codeceptjs run --verbose --features",
+    "test:acceptance:parallel": "yarn clean && ./node_modules/.bin/codeceptjs run-multiple parallel --verbose --features",
+    "test:acceptance:launchReport": "allure serve tests/acceptance/report",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gkushang/codeceptjs-quick-start"
+  },
+  "keywords": [
+    "media",
+    "picker",
+    "media",
+    "manager",
+    "media",
+    "picker"
+  ],
+  "author": "Kushang Gajjar <gkushang@gmail.com>",
+  "devDependencies": {
+    "@wdio/selenium-standalone-service": "^5.8.0",
+    "chai": "^4.2.0",
+    "codeceptjs": "^2.1.2",
+    "codeceptjs-selenium": "^1.0.2",
+    "debug": "^4.1.1",
+    "faker": "^4.1.0",
+    "rimraf": "^2.6.3",
+    "selenium-standalone": "^6.16.0",
+    "webdriverio": "^5.8.1"
+  }
+}
