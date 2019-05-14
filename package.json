@@ -15,12 +15,8 @@
     "url": "https://github.com/gkushang/codeceptjs-quick-start"
   },
   "keywords": [
-    "media",
-    "picker",
-    "media",
-    "manager",
-    "media",
-    "picker"
+    "codeceptjs",
+    "quick start"
   ],
   "author": "Kushang Gajjar <gkushang@gmail.com>",
   "devDependencies": {
