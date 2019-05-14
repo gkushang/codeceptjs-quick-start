@@ -1,4 +1,4 @@
-# media-manager acceptance tests
+# codeceptjs-quick-start
 
 ***[CodeceptJS][1] Acceptance Tests***
 
