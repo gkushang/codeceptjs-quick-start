@@ -44,11 +44,11 @@ To run on `headless` browser
 
 ## About
 
-* Scenarios are written in *Ghernkin BDD Syntax*, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
+* Scenarios are written in **Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
 
 * Uses [Should.js][3] Assertions Library
 
-* Reduces Flakieness with *RetryFailedSteps* plugin and a Webdriver's *SmartWait*
+* Reduces Flakieness with **RetryFailedSteps** plugin and a Webdriver's **SmartWait**
 
 * Page objects follow `<name_of_page>.page.js` naming pattern, and created under [pages][4] directory
 
