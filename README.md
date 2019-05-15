@@ -42,4 +42,22 @@ To run on `headless` browser
     yarn test:acceptance:launchReport
 ```
 
+## About
+
+#### Scenarios are written in Ghernkin Syntax, a.k.a .feature files
+
+Best Practices: [Prefer writing Declartive Test Scenarios and Feature files][2]
+
+#### Uses [Should.js][3] Library
+
+#### Reduces Flakieness with RetryFailedSteps plugin and a Webdriver's SmartWait
+
+#### Page objects follow `<name_of_page>.page.js` naming pattern
+
+#### Step Definitions files follows `<name_of_step>.steps.js` naming pattern
+
+
+
 [1]: https://codecept.io/
+[2]: https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Imperative+v.+Declarative+Testing+Scenarios
+[3]: https://shouldjs.github.io/
