@@ -4,6 +4,8 @@
 
 ## Install
 
+Prefer insalling [yarn][6]
+
 ```bash
     yarn
 ```
@@ -61,3 +63,4 @@ To run on `headless` browser
 [3]: https://shouldjs.github.io/
 [4]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/pages
 [5]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/step_definitions
+[6]: https://yarnpkg.com/en/docs/install#mac-stable
