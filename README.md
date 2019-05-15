@@ -7,6 +7,7 @@
 Prefer installing [yarn][6]
 
 ```bash
+    cd codeceptjs-quick-start
     yarn
 ```
 
