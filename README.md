@@ -44,20 +44,20 @@ To run on `headless` browser
 
 ## About
 
-#### Scenarios are written in Ghernkin Syntax, a.k.a .feature files
+* Scenarios are written in Ghernkin Syntax, a.k.a .feature files. [Prefer writing Declartive Test Scenarios][2]
 
-Best Practices: [Prefer writing Declartive Test Scenarios and Feature files][2]
+* Uses [Should.js][3] Library
 
-#### Uses [Should.js][3] Library
+* Reduces Flakieness with RetryFailedSteps plugin and a Webdriver's SmartWait
 
-#### Reduces Flakieness with RetryFailedSteps plugin and a Webdriver's SmartWait
+* Page objects follow `<name_of_page>.page.js` naming pattern, and created under [pages][4] directory
 
-#### Page objects follow `<name_of_page>.page.js` naming pattern
-
-#### Step Definitions files follows `<name_of_step>.steps.js` naming pattern
+* Step Definitions files follows `<name_of_step>.steps.js` naming pattern, and created under [step_definitions][5] directory
 
 
 
 [1]: https://codecept.io/
 [2]: https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Imperative+v.+Declarative+Testing+Scenarios
 [3]: https://shouldjs.github.io/
+[4]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/pages
+[5]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/step_definitions
