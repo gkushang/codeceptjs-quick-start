@@ -21,13 +21,13 @@
   "author": "Kushang Gajjar <gkushang@gmail.com>",
   "devDependencies": {
     "@wdio/selenium-standalone-service": "^5.8.0",
-    "chai": "^4.2.0",
     "codeceptjs": "^2.1.2",
     "codeceptjs-selenium": "^1.0.2",
     "debug": "^4.1.1",
     "faker": "^4.1.0",
     "rimraf": "^2.6.3",
     "selenium-standalone": "^6.16.0",
+    "should": "^13.2.3",
     "webdriverio": "^5.8.1"
   }
 }

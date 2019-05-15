@@ -10,5 +10,5 @@ When('he searches for the {string}', searchFor => {
 
 Then('he is able to see the correct repository', async () => {
   let resultHref = await ghSearchPage.grabHrefForResult();
-  resultHref[0].should.include('codeceptjs-quick-start');
+  resultHref[0].should.containEql('codeceptjs-quick-startsss', 'expected repository was not found');
 });

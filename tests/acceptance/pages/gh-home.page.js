@@ -2,7 +2,7 @@ const { I } = inject();
 
 module.exports = {
   locators: {
-    searchBox: '[data-hotkey]'
+    searchBox: '.header-search-input'
   },
 
   search(searchFor) {
