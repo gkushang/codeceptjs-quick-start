@@ -4,7 +4,7 @@
 
 ## Install
 
-Prefer insalling [yarn][6]
+Prefer installing [yarn][6]
 
 ```bash
     yarn
