@@ -2,6 +2,9 @@ const selenium = require('selenium-standalone');
 let debug = require('debug')('acceptance:config');
 const DEFAULT_HOST = 'https://github.com/';
 const RELATIVE_PATH = './tests/acceptance/';
+const PAGES_PATH = RELATIVE_PATH + 'pages/';
+const STEPS_PATH = RELATIVE_PATH + 'step_definitions/';
+
 const HOST = process.env.CODECEPT_HOST
   ? process.env.CODECEPT_HOST
   : DEFAULT_HOST;
@@ -41,8 +44,8 @@ const conf = {
   gherkin: {
     features: RELATIVE_PATH + 'features/*.feature',
     steps: [
-      RELATIVE_PATH + 'step_definitions/github.steps.js',
-      RELATIVE_PATH + 'step_definitions/hooks.js'
+      STEPS_PATH + 'github.steps.js',
+      STEPS_PATH + 'hooks.js'
     ]
   },
   plugins: {
@@ -80,8 +83,8 @@ const conf = {
   },
   include: {
     I: '.tests/acceptance/steps.js',
-    ghHomePage: RELATIVE_PATH + 'pages/gh-home.page.js',
-    ghSearchPage: RELATIVE_PATH + 'pages/gh-search.page.js'
+    ghHomePage: PAGES_PATH + 'gh-home.page.js',
+    ghSearchPage: PAGES_PATH + 'gh-search.page.js'
   },
   tests: RELATIVE_PATH + '/specs/*.spec.js',
   name: 'acceptance'
