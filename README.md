@@ -60,6 +60,27 @@ To run on `headless` browser
     yarn test:acceptance:launchReport
 ```
 
+## Sample Feature File
+
+```bash
+
+@search
+Feature: Search Github
+
+  In order to see Github Search works
+  As a Github user
+  I want to be able to search for repository
+
+ @search_repository
+  Scenario: Fred should see the highlighted results for the searched repository
+
+    Given Fred is on Github Homepage
+    When he searches for the "codeceptjs-quick-start"
+    Then he sees all the detailed highlighted results including description or license info and many more
+  
+```
+
+
 [1]: https://codecept.io/
 [2]: https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Imperative+v.+Declarative+Testing+Scenarios
 [3]: https://shouldjs.github.io/
