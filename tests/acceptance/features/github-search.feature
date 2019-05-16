@@ -1,10 +1,13 @@
 
+
 @search
 Feature: Search Github
 
   In order to see Github Search works
   As a Github user
   I want to be able to search for repository
+
+## If you have more than ONE datasets, use 'Scenario Outline'
 
   @search_repositories
   Scenario Outline: Fred is able to search for correct repository
@@ -17,6 +20,9 @@ Feature: Search Github
     | repository |
     | codeceptjs-quick-start |
     | gkushang/codeceptjs-selenium |
+
+
+## If you have one Scenario
 
  @search_results
   Scenario: Fred should see the highlighted results for the searched repository
