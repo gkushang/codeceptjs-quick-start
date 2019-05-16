@@ -21,5 +21,6 @@ Then('he sees all the detailed highlighted results including description or lice
     (await ghSearchPage.grabDescription()).trim().should.equal('Quick Start for CodeceptJS Acceptance Tests');
 
     // verify Partial Text
-    (await ghSearchPage.grabLicenseInfo()).trim().should.containEql('MIT');
+    // because there are two results for the same element, the result is in Array
+    (await ghSearchPage.grabLicenseInfo())[0].should.containEql('MIT');
 });
