@@ -5,7 +5,7 @@
 
 ## About
 
-#### This framework contains Gherkin BDD Tests with CodeceptJS & uses Should.JS assertion library
+> This framework contains Gherkin BDD Tests with CodeceptJS & uses Should.JS assertion library
 
 * Scenarios are written in **Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
 
