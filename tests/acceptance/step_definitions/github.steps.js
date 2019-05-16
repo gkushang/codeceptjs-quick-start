@@ -4,7 +4,7 @@ Given('Fred is on Github Homepage', () => {
 
   // navigate - genarally this should be part of Before hook
   I.amOnPage('/');
-  
+
 });
 
 When('he searches for the {string}', searchFor => {
@@ -21,7 +21,7 @@ Then('he sees all the detailed highlighted results including description or lice
   async () => {
 
     // verify Complete Text
-    (await ghSearchPage.grabDescription()).trim().should.equal('Quick Start for CodeceptJS Acceptance Tests');
+    (await ghSearchPage.grabDescription()).trim().should.equal('Gherkin BDD / Cucumber tests with CodeceptJS');
 
     // verify Partial Text
     // because there are two results for the same element, the result is in Array
