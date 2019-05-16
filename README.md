@@ -49,7 +49,7 @@ To run on `headless` browser
 
 * Scenarios are written in **Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
 
-* Uses [Should.js][3] Assertions Library
+* Uses [Should.js][3] Assertions Library. Various assertions with examples are available [here][7]
 
 * Reduces Flakieness with **RetryFailedSteps** plugin and a Webdriver's **SmartWait**
 
@@ -65,3 +65,4 @@ To run on `headless` browser
 [4]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/pages
 [5]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/step_definitions
 [6]: https://yarnpkg.com/en/docs/install#mac-stable
+[7]: https://github.com/gkushang/codeceptjs-quick-start/blob/master/tests/acceptance/step_definitions/github.steps.js
