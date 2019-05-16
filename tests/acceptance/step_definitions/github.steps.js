@@ -14,12 +14,12 @@ Then('he is able to see the {string} in search results', async (result) => {
   (await ghSearchPage.grabHrefForResult())[0].should.containEql(result);
 });
 
-Then('he sees all the detailed highlighted results including description or last update info and many more', 
+Then('he sees all the detailed highlighted results including description or license info and many more', 
   async () => {
 
-    // verify Partial Text
+    // verify Complete Text
     (await ghSearchPage.grabDescription()).trim().should.equal('Quick Start for CodeceptJS Acceptance Tests');
 
-    // verify Complete Text
-    (await ghSearchPage.grabUpdateInfo()).trim().should.containEql('Updated');
+    // verify Partial Text
+    (await ghSearchPage.grabLicenseInfo()).trim().should.containEql('MIT');
 });

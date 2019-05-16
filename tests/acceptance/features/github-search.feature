@@ -29,5 +29,5 @@ Feature: Search Github
 
     Given Fred is on Github Homepage
     When he searches for the "codeceptjs-quick-start"
-    Then he sees all the detailed highlighted results including description or last update info and many more
+    Then he sees all the detailed highlighted results including description or license info and many more
   
