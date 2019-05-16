@@ -1,7 +1,10 @@
 const { I, ghHomePage, ghSearchPage } = inject();
 
 Given('Fred is on Github Homepage', () => {
+
+  // navigate - genarally this should be part of Before hook
   I.amOnPage('/');
+  
 });
 
 When('he searches for the {string}', searchFor => {
