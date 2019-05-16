@@ -8,6 +8,7 @@
     "test:acceptance": "yarn clean && ./node_modules/.bin/codeceptjs run --verbose --features",
     "test:acceptance:parallel": "yarn clean && ./node_modules/.bin/codeceptjs run-multiple parallel --verbose --features",
     "test:acceptance:launchReport": "allure serve tests/acceptance/report",
+    "gherkin:snippets": "./node_modules/.bin/codeceptjs gherkin:snippets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
