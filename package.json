@@ -19,6 +19,7 @@
     "codeceptjs",
     "quick start"
   ],
+  "license": "MIT",
   "author": "Kushang Gajjar <gkushang@gmail.com>",
   "devDependencies": {
     "@wdio/selenium-standalone-service": "^5.8.0",
