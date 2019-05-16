@@ -60,6 +60,8 @@ To run on `headless` browser
     yarn test:acceptance:launchReport
 ```
 
+>
+
 ## Sample Feature File
 
 ```bash
