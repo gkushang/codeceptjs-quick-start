@@ -42,9 +42,9 @@ const conf = {
     }
   },
   gherkin: {
-    features: RELATIVE_PATH + 'features/*.feature',
+    features: RELATIVE_PATH + 'features/**/*.feature',
     steps: [
-      STEPS_PATH + 'github.steps.js',
+      STEPS_PATH + 'search/github.steps.js',
       STEPS_PATH + 'hooks.js'
     ]
   },
@@ -83,11 +83,10 @@ const conf = {
   },
   include: {
     I: '.tests/acceptance/steps.js',
-    ghHomePage: PAGES_PATH + 'gh-home.page.js',
-    ghSearchPage: PAGES_PATH + 'gh-search.page.js'
+    ghHomePage: PAGES_PATH + 'github/gh-home.page.js',
+    ghSearchPage: PAGES_PATH + 'github/gh-search.page.js'
   },
-  tests: RELATIVE_PATH + '/specs/*.spec.js',
-  name: 'acceptance'
+  name: 'Github Acceptance Tests'
 };
 
 conf.helpers.WebDriver = webDriver;
