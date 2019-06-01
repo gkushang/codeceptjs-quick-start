@@ -17,7 +17,7 @@
 
 * Step Definitions files follows `<name_of_step>.steps.js` naming pattern, and created under [step_definitions][5] directory
 
-## Colocat CodeceptJS to your existing project
+## Colocate CodeceptJS to your existing project
 
 Follow the intructions [here][8]
 
