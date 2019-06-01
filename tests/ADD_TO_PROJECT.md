@@ -7,7 +7,7 @@
     git clone git@github.com:gkushang/codeceptjs-quick-start.git
 ```
 
-### Step 2: Colocate the existing setup
+### Step 2: Colocate the CodeceptJS tests to your repository
 
 ```bash
     cd codeceptjs-quick-start
@@ -19,25 +19,20 @@
     cd <to_your_desired_project>
     
     yarn add @wdio/selenium-standalone-service allure-commandline codeceptjs codeceptjs-selenium debug faker protractor rimraf should webdriverio -D
-
 ```
 
 Update the following PATH's in `codeceptjs.config.js` with your actual paths,
 
 ```bash
-
     const DEFAULT_HOST = <your_host>;
     const RELATIVE_PATH = <your_relative_path_where_acceptance_folder_exists>
-
 ```
 
-### Step 3: Test the setup
+### Step 3: Test the setup by running existing GitHub tests
 
 ```bash
-    
     cd <to_your_desired_project>
     ./node_modules/.bin/codeceptjs run --config=<path_to_codeceptjs.conf.js_file>
-
 ```
 
 
