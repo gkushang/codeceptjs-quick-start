@@ -19,7 +19,7 @@
 
 ## Colocate CodeceptJS to your existing project
 
-Follow this [3 Step easy proecess][8]
+Follow this [3 Step easy process][8]
 
 ## Install
 
