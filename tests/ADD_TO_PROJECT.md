@@ -12,9 +12,9 @@
 ```bash
     cd codeceptjs-quick-start
 
-    cp -a tests/acceptance/ <path_to_your_desired_acceptance_folder>
+    cp -a tests/acceptance/ <relative_path_to_your_desired_acceptance_folder>
     
-    cp codecept.conf.js <path_to_root_of_your_desired_project_or_your_monorepo> 
+    cp codecept.conf.js <relative_path_to_root_of_your_desired_project_or_your_monorepo> 
 
     cd <to_your_desired_project>
     
@@ -24,16 +24,20 @@
 Update the following PATH's in `codeceptjs.config.js` with your actual paths,
 
 ```bash
-    const DEFAULT_HOST = <your_host>;
-    const RELATIVE_PATH = <your_relative_path_where_acceptance_folder_exists>
+    const RELATIVE_PATH = <relative_path_where_acceptance_folder_exists>
 ```
 
 ### Step 3: Test the setup by running existing GitHub tests
 
-```bash
-    cd <to_your_desired_project>
-    ./node_modules/.bin/codeceptjs run --config=<path_to_codeceptjs.conf.js_file>
-```
+Run existing tests
 
+```bash
+    ./node_modules/.bin/codeceptjs run --config=<path_to_codeceptjs.conf.js_file> --grep=@search_results
+```
+Launch HTML Report
+
+```bash
+    ./node_modules/.bin/allure serve <relative_path_to_report_folder_under_acceptance_folder>
+```
 
 
