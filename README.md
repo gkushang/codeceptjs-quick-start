@@ -17,6 +17,10 @@
 
 * Step Definitions files follows `<name_of_step>.steps.js` naming pattern, and created under [step_definitions][5] directory
 
+## Colocat CodeceptJS to your existing project
+
+Follow the intructions [here][8]
+
 ## Install
 
 Prefer installing [yarn][6]
@@ -90,3 +94,4 @@ Feature: Search Github
 [5]: https://github.com/gkushang/codeceptjs-quick-start/tree/master/tests/acceptance/step_definitions
 [6]: https://yarnpkg.com/en/docs/install#mac-stable
 [7]: https://github.com/gkushang/codeceptjs-quick-start/blob/master/tests/acceptance/step_definitions/github.steps.js
+[8]: https://github.com/gkushang/codeceptjs-quick-start/blob/master/tests/ADD_TO_PROJECT.md

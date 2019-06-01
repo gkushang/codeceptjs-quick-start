@@ -1,5 +1,5 @@
-const selenium = require('selenium-standalone');
 let debug = require('debug')('acceptance:config');
+
 const DEFAULT_HOST = 'https://github.com/';
 const RELATIVE_PATH = './tests/acceptance/';
 const PAGES_PATH = RELATIVE_PATH + 'pages/';
@@ -82,7 +82,6 @@ const conf = {
     }
   },
   include: {
-    I: '.tests/acceptance/steps.js',
     ghHomePage: PAGES_PATH + 'github/gh-home.page.js',
     ghSearchPage: PAGES_PATH + 'github/gh-search.page.js'
   },
