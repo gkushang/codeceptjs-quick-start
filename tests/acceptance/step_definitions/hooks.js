@@ -1,4 +1,4 @@
-const { I, pdHomePage } = inject();
+const { I } = inject();
 const should = require('should');
 
 Before(async () => {
