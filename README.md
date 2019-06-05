@@ -19,7 +19,7 @@
 
 ## Colocate CodeceptJS to your existing project
 
-Follow this [3 Step easy process][8] to setup CodeceptJS with Cucumber/Gherkin for your project
+Follow this [Easy 3-Steps process][8] to setup CodeceptJS with Cucumber/Gherkin for your project
 
 ## Install
 
