@@ -1,4 +1,6 @@
 let debug = require('debug')('acceptance:config');
+let merge = require('deepmerge');
+let sauce = require('./codecept.sauce.conf');
 
 const DEFAULT_HOST = 'https://github.com';
 const RELATIVE_PATH = './tests/acceptance/';
@@ -22,22 +24,13 @@ const webDriver = {
   }
 };
 
-const sauceDriver = {
-  url: HOST,
-  browser: "chrome",
-  host: "ondemand.saucelabs.com",
-  port: 443,
-  user: process.env.SAUCE_USERNAME,
-  key: process.env.SAUCE_KEY
-}
-
 const headlessCaps = {
   chromeOptions: {
     args: ['--headless', '--disable-gpu', '--window-size=1920,1080']
   }
 };
 
-const conf = {
+let conf = {
   output: RELATIVE_PATH + 'report',
   cleanup: true,
   coloredLogs: true,
@@ -99,12 +92,15 @@ const conf = {
 
 conf.helpers.WebDriver = webDriver;
 
-if (process.env.CODECEPT_DRIVER === 'headless') {
-    debug('running tests on "Headless" browser');
-    conf.helpers.WebDriver.capabilities = headlessCaps;
-} else if ( process.env.CODECEPT_DRIVER === 'sauce') {   
-    debug('running tests on Sauce Labs');
-    conf.helpers.WebDriver = sauceDriver;
+// run on saucelabs. Pass "CODECEPT_DRIVER=sauce" env variable while running your test
+if (process.env.CODECEPT_DRIVER === 'sauce') {
+  debug('running tests on "Sauce" browser');
+  conf = merge(cong, sauce.conf);
+} 
+// run on headless. Pass "CODECEPT_DRIVER=headless" env variable while running your test
+else if (process.env.CODECEPT_DRIVER === 'headless') {
+  debug('running tests on "Headless" browser');
+  conf.helpers.WebDriver.capabilities = headlessCaps;
 }
 
 exports.config = conf;
