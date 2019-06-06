@@ -1,35 +1,50 @@
 let browsers = {
     chrome: {
-        browser: 'chrome',
-        platform: 'macOS 10.14',
-        version: '74.0'
-
+        browserName: 'chrome',
+        platformName: 'macOS',
+        platformVersion: '10.14'
     },
     firefox: {
         browser: 'firefox',
-        platform: 'macOS 10.13',
-        version: '67.0'
+        platformName: 'Windows 10',
+        platformVersion: '67.0'
     },
     safari: {
         browser: 'safari',
-        platform: 'macOS 10.14',
-        version: '12.0'
+        platformName: 'macOS 10.14',
+        platformVersion: '12.0'
     },
     edge: {
         browser: 'MicrosoftEdge',
-        platform: 'Windows 10',
-        version: '16.16299'
+        platformName: 'Windows 10',
+        platformVersion: '16.16299'
     },
     ie: {
         browser: 'internet explorer',
-        platform: 'Windows 10',
-        version: '11.285'
+        platformName: 'Windows 10',
+        platformVersion: '11.285'
     }
 };
 
+function getBrowsers() {
+    if (process.profile) {
+        console.log('process.profile::: ', process.profile);
+        let multibrowsers = [];
+        let sauceBrowsers = process.profile.split(':')[1].split(',');
+        console.log('sauceBrowsers::: ', sauceBrowsers);
+        sauceBrowsers.forEach(browser => {
+            multibrowsers.push(browsers[browser]);
+        });
+        console.log('multibrowsers::: ', multibrowsers);
+        return multibrowsers;
+    }
+
+    return [browsers.chrome];
+}
+
 let conf = {
   helpers: {
-    WebDriver: browsers[process.profile ? process.profile.split(':')[1] : 'chrome']
+    WebDriver: getBrowsers()[0]
   },
   plugins: {
     wdio: {
@@ -40,12 +55,10 @@ let conf = {
       region: 'us'
     }
   },
-    multiple: {
-        multibrowsers: {
-            chunks: 3,
-            browsers: [
-                browsers.chrome, browsers.edge, browsers.firefox
-            ]
+  multiple: {
+      multibrowsers: {
+          chunks: getBrowsers().length,
+          browsers: getBrowsers()
         },
     }
 };
