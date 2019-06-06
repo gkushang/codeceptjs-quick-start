@@ -22,9 +22,18 @@ const webDriver = {
   }
 };
 
+const sauceDriver = {
+  url: HOST,
+  browser: "chrome",
+  host: "ondemand.saucelabs.com",
+  port: 443,
+  user: process.env.SAUCE_USERNAME,
+  key: process.env.SAUCE_KEY
+}
+
 const headlessCaps = {
   chromeOptions: {
-    args: ['--headless', '--disable-gpu', '--window-size=800,600']
+    args: ['--headless', '--disable-gpu', '--window-size=1920,1080']
   }
 };
 
@@ -91,8 +100,11 @@ const conf = {
 conf.helpers.WebDriver = webDriver;
 
 if (process.env.CODECEPT_DRIVER === 'headless') {
-  debug('running tests on "Headless" browser');
-  conf.helpers.WebDriver.capabilities = headlessCaps;
+    debug('running tests on "Headless" browser');
+    conf.helpers.WebDriver.capabilities = headlessCaps;
+} else if ( process.env.CODECEPT_DRIVER === 'sauce') {   
+    debug('running tests on Sauce Labs');
+    conf.helpers.WebDriver = sauceDriver;
 }
 
 exports.config = conf;
