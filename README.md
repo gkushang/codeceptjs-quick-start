@@ -49,7 +49,7 @@ To run on `firefox`
 To run on `headless` browser
 
 ```bash
-    CODECEPT_DRIVER=headless yarn acceptance
+    yarn acceptance --profile=headless
 ```
 
 ### Run all tests parallel

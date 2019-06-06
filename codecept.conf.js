@@ -7,9 +7,7 @@ const RELATIVE_PATH = './tests/acceptance/';
 const PAGES_PATH = RELATIVE_PATH + 'pages/';
 const STEPS_PATH = RELATIVE_PATH + 'step_definitions/';
 
-const HOST = process.env.CODECEPT_HOST
-  ? process.env.CODECEPT_HOST
-  : DEFAULT_HOST;
+const HOST = process.host || DEFAULT_HOST;
 
 const webDriver = {
   url: HOST,
@@ -74,10 +72,6 @@ let conf = {
       chunks: 2,
       browsers: ['chrome']
     },
-    multibrowsers: {
-      chunks: 2,
-      browsers: ['firefox', 'chrome']
-    },
     smoke: {
       grep: '@smoke',
       browsers: ['chrome']
@@ -92,15 +86,26 @@ let conf = {
 
 conf.helpers.WebDriver = webDriver;
 
-// run on saucelabs. Pass "CODECEPT_DRIVER=sauce" env variable while running your test
-if (process.env.CODECEPT_DRIVER === 'sauce') {
-  debug('running tests on "Sauce" browser');
-  conf = merge(cong, sauce.conf);
-} 
-// run on headless. Pass "CODECEPT_DRIVER=headless" env variable while running your test
-else if (process.env.CODECEPT_DRIVER === 'headless') {
-  debug('running tests on "Headless" browser');
-  conf.helpers.WebDriver.capabilities = headlessCaps;
+if (process.profile) {
+
+  // run on saucelabs
+  // --profile=sauce:chrome, --profile=sauce:firefox
+  if (process.profile.match('sauce:[a-zA-Z]')) {
+    debug('running tests on "Sauce" browser');
+    conf = merge(conf, sauce.conf);
+    debug('config: ', conf);
+    debug('conf.multiple.multibrowsers: ', conf.multiple.multibrowsers);
+  } 
+
+  // run on chrome headless browser
+  // --profile=chrome:headless
+  else if (process.profile === 'chrome:headless') {
+    debug('running tests on "Headless" browser');
+
+    process.profile = process.profile.split(':')[0];
+    conf.helpers.WebDriver.browser = process.profile;
+    conf.helpers.WebDriver.capabilities = headlessCaps;
+  }
 }
 
 exports.config = conf;
