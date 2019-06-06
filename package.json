@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf tests/acceptance/report/*.*",
-    "test:acceptance": "yarn clean && ./node_modules/.bin/codeceptjs run --verbose --features",
-    "test:acceptance:parallel": "yarn clean && ./node_modules/.bin/codeceptjs run-multiple parallel --verbose --features",
-    "test:acceptance:launchReport": "./node_modules/.bin/allure serve tests/acceptance/report",
-    "gherkin:snippets": "./node_modules/.bin/codeceptjs gherkin:snippets",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "acceptance": "yarn clean && ./node_modules/.bin/codeceptjs run --verbose --features",
+    "acceptance:parallel": "yarn clean && ./node_modules/.bin/codeceptjs run-multiple parallel --verbose --features",
+    "acceptance:report": "./node_modules/.bin/allure serve tests/acceptance/report",
+    "bdd:snippets": "./node_modules/.bin/codeceptjs bdd:snippets",
+    "tests": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

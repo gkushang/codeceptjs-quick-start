@@ -1,6 +1,6 @@
 let debug = require('debug')('acceptance:config');
 
-const DEFAULT_HOST = 'https://github.com/';
+const DEFAULT_HOST = 'https://github.com';
 const RELATIVE_PATH = './tests/acceptance/';
 const PAGES_PATH = RELATIVE_PATH + 'pages/';
 const STEPS_PATH = RELATIVE_PATH + 'step_definitions/';
@@ -90,7 +90,7 @@ const conf = {
 
 conf.helpers.WebDriver = webDriver;
 
-if (process.env.CODECEPT_ENV && process.env.CODECEPT_ENV === 'headless') {
+if (process.env.CODECEPT_DRIVER === 'headless') {
   debug('running tests on "Headless" browser');
   conf.helpers.WebDriver.capabilities = headlessCaps;
 }

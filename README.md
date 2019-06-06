@@ -37,31 +37,31 @@ Prefer installing [yarn][6]
 Default browser is `chrome`
 
 ```bash
-    yarn test:acceptance
+    yarn acceptance
 ```
 
 To run on `firefox`
 
 ```bash
-    yarn test:acceptance -- --profile firefox
+    yarn acceptance -- --profile firefox
 ```
 
 To run on `headless` browser
 
 ```bash
-    CODECEPT_ENV=headless yarn test:acceptance
+    CODECEPT_DRIVER=headless yarn acceptance
 ```
 
 ### Run all tests parallel
 
 ```bash
-    yarn test:acceptance:parallel
+    yarn acceptance:parallel
 ```
 
 ### Launch HTML Report
 
 ```bash
-    yarn test:acceptance:launchReport
+    yarn acceptance:launchReport
 ```
 
 >
