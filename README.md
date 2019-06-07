@@ -7,7 +7,7 @@
 
 > This framework contains Gherkin BDD Tests with CodeceptJS & uses Should.JS assertion library. Intgrated with Saucelabs to run on Multibrowsers in Parallel
 
-* [Why BDD?](https://hackernoon.com/bdd-in-3-minutes-c3f8fc022237)
+* A Medium post on [Why BDD?](https://hackernoon.com/bdd-in-3-minutes-c3f8fc022237)
 
 * Scenarios are written in **Cucumber Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
 
