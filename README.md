@@ -45,7 +45,7 @@ Default browser is `chrome`
 To run on `firefox`
 
 ```bash
-    yarn acceptance -- --profile firefox
+    yarn acceptance --profile firefox
 ```
 
 To run on `headless` browser
