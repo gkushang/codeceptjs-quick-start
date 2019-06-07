@@ -19,9 +19,9 @@
 
 * Step Definitions files follows `<name_of_step>.steps.js` naming pattern, and created under [step_definitions][5] directory
 
-## Colocate CodeceptJS to your existing project
+## Co-locate CodeceptJS to your existing project
 
-Follow this [Easy 3-Steps process][8] to setup CodeceptJS with Cucumber/Gherkin for your project
+Follow this [Easy 3-Steps process][8] to co-locate and quik start with CodeceptJS-Cucumber tests
 
 ## Install
 
@@ -68,11 +68,11 @@ To run on `headless` browser
 
 ## Saucelabs: Single or Multibrowsers in Parallel
 
-This framework uses `wdio` to run tests on standalone selenium/on saucelabs platform. It can run tests in any requested Saucelabs browsers or can run Multibrowsers all in parallel.
+This framework uses `wdio` to run tests on standalone selenium/on saucelabs platform. Run tests in any requested Saucelabs browsers or can run Multibrowsers all in parallel.
 
-Pass your required Sauce browsers thru `profile` param as described below
+Pass your required Sauce browsers thru `profile` param as described below.
 
-Important: Make sure to export your Sauce Username and Sauce Access Key as env variables
+**Important:** Make sure to export your Sauce Username and Sauce Access Key as env variables
 
 ```bash
     export SAUCE_USERNAME=<sauce_username>
