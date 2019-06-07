@@ -1,6 +1,4 @@
-
-
-@search
+@search_github
 Feature: Search Github
 
   In order to see Github Search works
@@ -29,7 +27,7 @@ Feature: Search Github
 
 ## If you have one Scenario
 
- @search_results
+ @search
   Scenario: Fred should see the highlighted results for the searched repository
 
     When he searches for the "codeceptjs-quick-start"

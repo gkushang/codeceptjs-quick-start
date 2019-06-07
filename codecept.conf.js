@@ -93,8 +93,7 @@ if (process.profile) {
   if (process.profile.match('sauce:[a-zA-Z]')) {
     debug('running tests on "Sauce" browser');
     conf = merge(conf, sauce.conf);
-    debug('config: ', conf);
-    debug('conf.multiple.multibrowsers: ', conf.multiple.multibrowsers);
+    debug('config: ', JSON.stringify(conf, 2));
   } 
 
   // run on chrome headless browser

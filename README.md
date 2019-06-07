@@ -5,9 +5,11 @@
 
 ## About
 
-> This framework contains Gherkin BDD Tests with CodeceptJS & uses Should.JS assertion library
+> This framework contains Gherkin BDD Tests with CodeceptJS & uses Should.JS assertion library. Intgrated with Saucelabs to run on Multibrowsers in Parallel
 
 * Scenarios are written in **Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
+
+* Run on SauceLabs. Single browser or Multibrowsers in Parallel
 
 * Uses [Should.js][3] Assertions Library. Various assertions with examples are available [here][7]
 
@@ -49,7 +51,7 @@ To run on `firefox`
 To run on `headless` browser
 
 ```bash
-    yarn acceptance --profile=headless
+    yarn acceptance --profile headless
 ```
 
 ### Run all tests parallel
@@ -61,10 +63,50 @@ To run on `headless` browser
 ### Launch HTML Report
 
 ```bash
-    yarn acceptance:launchReport
+    yarn acceptance:report
 ```
 
+## Saucelabs: Single or Multibrowsers in Parallel
+
+This framework uses `wdio` to run tests on standalone selenium/on saucelabs platform. It can run tests in any requested Saucelabs browsers or can run Multibrowsers all in parallel.
+
+Pass your required Sauce browsers thru `profile` param as described below
+
+Important: Make sure to export your Sauce Username and Sauce Access Key as env variables
+
+```bash
+    export SAUCE_USERNAME=<sauce_username>
+    export SAUCE_KEY=<sauce_key>
+```
+
+### Run on Single browser on Saucelabs
+
+command: `yarn acceptance`
+param: `--profile sauce:<sauce_browser>`
+available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
+
+```bash
+    yarn acceptance --grep @search_results --profile sauce:chrome
+```
+
+### Run Parallel on Multibrowsers on Saucelabs
+
+command: `yarn acceptance:multibrowsers`
+param: `--profile sauce:<first_sauce_browser>,<second_sauce_browser>,<and_so_on>`
+available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
+
+```bash
+    yarn acceptance:multibrowsers --grep @search_results --profile sauce:chrome,ie,safari
+```
 >
+
+## Debug
+
+To print debug messages, pass the `DEBUG` param
+
+```bash
+    DEBUG=acceptance* yarn acceptance --grep @search_results
+```
 
 ## Sample Feature File
 
