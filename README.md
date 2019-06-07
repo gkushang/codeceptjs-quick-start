@@ -19,6 +19,16 @@
 
 * Step Definitions files follows `<name_of_step>.steps.js` naming pattern, and created under [step_definitions][5] directory
 
+## Quick Links
+
+* [Co-locate CodeceptJS to your existing project](https://github.com/gkushang/codeceptjs-quick-start#colocate-codeceptjs-to-your-existing-project)
+* [Install](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#install)
+* [Run Acceptance Tests](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#run-acceptance-tests)
+* [Launch HTML Report](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#launch-html-report)
+* [Saucelabs: Single or Multibrowsers in Parallel](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#saucelabs-single-or-multibrowsers-in-parallel)
+* [Debug](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#debug)
+
+
 ## Co-locate CodeceptJS to your existing project
 
 Follow this [Easy 3-Steps process][8] to co-locate and quik start with CodeceptJS-Cucumber tests
@@ -60,7 +70,7 @@ To run on `headless` browser
     yarn acceptance:parallel
 ```
 
-### Launch HTML Report
+## Launch HTML Report
 
 ```bash
     yarn acceptance:report
