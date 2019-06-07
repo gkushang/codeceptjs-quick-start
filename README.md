@@ -23,6 +23,7 @@
 
 ## Quick Links
 
+* [Why BDD?](https://hackernoon.com/bdd-in-3-minutes-c3f8fc022237)
 * [Co-locate CodeceptJS to your existing project](https://github.com/gkushang/codeceptjs-quick-start#colocate-codeceptjs-to-your-existing-project)
 * [Install](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#install)
 * [Run Acceptance Tests](https://github.com/gkushang/codeceptjs-quick-start/blob/master/README.md#run-acceptance-tests)
