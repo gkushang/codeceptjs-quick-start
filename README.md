@@ -81,9 +81,9 @@ Important: Make sure to export your Sauce Username and Sauce Access Key as env v
 
 ### Run on Single browser on Saucelabs
 
-command: `yarn acceptance`
-param: `--profile sauce:<sauce_browser>`
-available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
+* command: `yarn acceptance`
+* param: `--profile sauce:<sauce_browser>`
+* available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
 
 ```bash
     yarn acceptance --grep @search_results --profile sauce:chrome
@@ -91,9 +91,9 @@ available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
 
 ### Run Parallel on Multibrowsers on Saucelabs
 
-command: `yarn acceptance:multibrowsers`
-param: `--profile sauce:<first_sauce_browser>,<second_sauce_browser>,<and_so_on>`
-available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
+* command: `yarn acceptance:multibrowsers`
+* param: `--profile sauce:<first_sauce_browser>,<second_sauce_browser>,<and_so_on>`
+* available browsers: `chrome`, `ie`, `edge`, `safari`, `firefox`
 
 ```bash
     yarn acceptance:multibrowsers --grep @search_results --profile sauce:chrome,ie,safari
