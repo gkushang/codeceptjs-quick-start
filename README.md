@@ -9,7 +9,7 @@
 
 * Scenarios are written in **Ghernkin BDD Syntax**, a.k.a `.feature` files. [Prefer writing Declartive Test Scenarios][2]
 
-* Run on SauceLabs. Single browser or Multibrowsers in Parallel
+* Run on **SauceLabs**. Single browser or Multibrowsers in Parallel
 
 * Uses [Should.js][3] Assertions Library. Various assertions with examples are available [here][7]
 
