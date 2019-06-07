@@ -1,6 +1,6 @@
 # codeceptjs-quick-start
 
-***[CodeceptJS][1] Acceptance Tests***
+***[CodeceptJS][1] Acceptance Tests with Cucumber and Saucelabs***
 
 
 ## About
