@@ -1,1 +1,1 @@
-## This repository is moved to [CodeceptJS-E2E], which provides complete E2E Solution with Cucumber and SauceLabs
+## This repository is moved to [CodeceptJS-E2E](https://github.com/gkushang/codeceptjs-e2e), which provides complete E2E Solution with Cucumber and SauceLabs
